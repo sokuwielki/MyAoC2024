@@ -1,5 +1,69 @@
 <?php
 
+/*
+ZIEL
+1.
+Bei diesem Suchwort können Wörter horizontal, vertikal, diagonal oder rückwärts geschrieben sein oder sich sogar über andere Wörter erstrecken.
+Es ist allerdings etwas ungewöhnlich, da Sie nicht nur eine Instanz von XMAS finden müssen, sondern alle.
+Hier sind einige Möglichkeiten, wie XMAS erscheinen kann, wobei irrelevante Zeichen durch . ersetzt wurden:
+
+..X...
+.SAMX.
+.A..A.
+XMAS.S
+.X....
+Das eigentliche Suchwort ist stattdessen voller Buchstaben. Beispiel:
+
+MMMSXXMASM
+MSAMXMSMSA
+AMXSXMAAMM
+MSAMASMSMX
+XMASAMXAMM
+XXAMMXXAMA
+SMSMSASXSS
+SAXAMASAAA
+MAMMMXMMMM
+MXMXAXMASX
+In diesem Suchwort kommt XMAS insgesamt 18 Mal vor; hier ist das gleiche Suchwort noch einmal, wobei Buchstaben, die in keinem XMAS vorkommen, durch . ersetzt wurden:
+
+....XXMAS.
+.SAMXMS...
+...S..A...
+..A.A.MS.X
+XMASAMX.MM
+X.....XA.A
+S.S.S.S.SS
+.A.A.A.A.A
+..M.M.M.MM
+.X.X.XMASX
+
+Wie oft kommt XMAS vor?
+
+2.
+Auf der Suche nach den Anweisungen drehen Sie das Wortsuchrätsel um und stellen fest, dass dies eigentlich kein XMAS-Puzzle ist;
+es ist ein X-MAS-Puzzle, in dem Sie zwei MAS in Form eines X finden sollen. Eine Möglichkeit, dies zu erreichen, ist wie folgt:
+
+M.S
+.A.
+M.S
+Irrelevante Zeichen wurden im obigen Diagramm erneut durch . ersetzt. Innerhalb des X kann jedes MAS vorwärts oder rückwärts geschrieben werden.
+
+Hier ist das gleiche Beispiel wie zuvor, aber dieses Mal wurden stattdessen alle X-MAS beibehalten:
+
+.M.S......
+..A..MSMS.
+.M.S.MAA..
+..A.ASMSM.
+.M.S.M....
+..........
+S.S.S.S.S.
+.A.A.A.A..
+M.M.M.M.M.
+..........
+In diesem Beispiel erscheint ein X-MAS 9 Mal.
+Wie oft kommt X-MAS vor?
+*/
+
 // Read the content of input.txt
 $input = file("input.txt");
 
