@@ -1,6 +1,46 @@
 <?php
 
+/*
+ZIEL
+1.
+Ein Bericht gilt also nur dann als sicher, wenn beide der folgenden Aussagen zutreffen:
+
+Die Pegel steigen entweder alle an oder sinken alle.
+Jeder der beiden benachbarten Pegel unterscheidet sich um mindestens eins und höchstens drei.
+Im obigen Beispiel können die Berichte durch Überprüfen dieser Regeln als sicher oder unsicher eingestuft werden:
+
+7 6 4 2 1: Sicher, weil die Pegel alle um 1 oder 2 sinken.
+1 2 7 8 9: Unsicher, weil 2 7 eine Erhöhung um 5 ist.
+9 7 6 2 1: Unsicher, weil 6 2 eine Verringerung um 4 ist.
+1 3 2 4 5: Unsicher, weil 1 3 steigt, aber 3 2 sinkt.
+8 6 4 4 1: Unsicher, weil 4 4 weder eine Erhöhung noch eine Verringerung ist.
+1 3 6 7 9: Sicher, weil die Pegel alle um 1, 2 oder 3 steigen.
+In diesem Beispiel sind also 2 Berichte sicher.
+
+Analysieren Sie die ungewöhnlichen Daten der Ingenieure. Wie viele Berichte sind sicher?
+
+2.
+Jetzt gelten die gleichen Regeln wie zuvor, außer wenn das Entfernen einer einzelnen Ebene aus einem unsicheren Bericht diesen sicher machen würde, gilt der Bericht stattdessen als sicher.
+
+Weitere Berichte aus dem obigen Beispiel sind jetzt sicher:
+
+7 6 4 2 1: Sicher ohne Entfernen einer Ebene.
+1 2 7 8 9: Unsicher, unabhängig davon, welche Ebene entfernt wird.
+9 7 6 2 1: Unsicher, unabhängig davon, welche Ebene entfernt wird.
+1 3 2 4 5: Sicher durch Entfernen der zweiten Ebene, 3.
+8 6 4 4 1: Sicher durch Entfernen der dritten Ebene, 4.
+1 3 6 7 9: Sicher ohne Entfernen einer Ebene.
+*/
+
 $file_path = "input.txt";
+/*
+7 6 4 2 1
+1 2 7 8 9
+9 7 6 2 1
+1 3 2 4 5
+8 6 4 4 1
+1 3 6 7 9
+*/
 $file = fopen($file_path,"r");
 
 $result = 0;
